@@ -14,7 +14,7 @@
     "rebuild": "npm run clean && npm run migrate",
     "reset": "truffle migrate --reset",
     "test": "truffle test",
-    "install": "npm install && cd client && npm install",
+    "setup": "npm install && cd client && npm install",
     "start": "cd client && npm run start"
   },
   "repository": {
