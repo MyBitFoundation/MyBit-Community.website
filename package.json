@@ -8,14 +8,14 @@
   },
   "scripts": {
     "blockchain": "ganache-cli --port 8545 --mnemonic \"own install ladder notice repair mother wing shine allow mimic lazy bike\"",
-    "clean": "rm -rf client/src/contracts",
+    "clean": "rm -rf app/src/contracts",
     "compile": "truffle compile",
     "migrate": "truffle migrate",
     "rebuild": "npm run clean && npm run migrate",
     "reset": "truffle migrate --reset",
     "test": "truffle test",
-    "setup": "npm install && cd client && npm install",
-    "start": "cd client && npm run start"
+    "setup": "npm install && cd app && npm install",
+    "start": "cd app && npm run start"
   },
   "repository": {
     "type": "git",
