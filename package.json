@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/truffle-box/drizzle-box#readme",
   "dependencies": {
+    "ganache-cli": "^6.4.1",
     "openzeppelin-solidity": "git://github.com/OpenZeppelin/openzeppelin-solidity.git#master",
     "truffle": "^5.0.7"
   },
