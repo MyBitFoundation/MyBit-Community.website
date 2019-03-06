@@ -7,7 +7,15 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "blockchain": "ganache-cli --port 8545 --mnemonic \"own install ladder notice repair mother wing shine allow mimic lazy bike\"",
+    "clean": "rm -rf client/src/contracts",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "rebuild": "npm run clean && npm run migrate",
+    "reset": "truffle migrate --reset",
+    "test": "truffle test",
+    "install": "npm install && cd client && npm install",
+    "start": "cd client && npm run start"
   },
   "repository": {
     "type": "git",
@@ -21,7 +29,8 @@
   },
   "homepage": "https://github.com/truffle-box/drizzle-box#readme",
   "dependencies": {
-    "openzeppelin-solidity": "git://github.com/OpenZeppelin/openzeppelin-solidity.git#master"
+    "openzeppelin-solidity": "git://github.com/OpenZeppelin/openzeppelin-solidity.git#master",
+    "truffle": "^5.0.7"
   },
   "devDependencies": {}
 }

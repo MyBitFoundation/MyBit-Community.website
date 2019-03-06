@@ -5,7 +5,7 @@ import "openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol";
 contract NFTStore is ERC721Full {
     using Counters for Counters.Counter;
     using SafeMath for uint256;
-    Counters.Counter private tokenId;
+    Counters.Counter internal tokenId;
 
     event LogBadgeMinted(uint256 _tokendId, address _owner);
 
@@ -18,12 +18,13 @@ contract NFTStore is ERC721Full {
         string memory tokenURI
     )
         public
-        returns (uint256)
+        returns (bool)
     {
         uint256 badgeTokenId = tokenId.current();
+        tokenId.increment();
         _mint(msg.sender, badgeTokenId);
         _setTokenURI(badgeTokenId, tokenURI);
         emit LogBadgeMinted(badgeTokenId, msg.sender);
-        return badgeTokenId;
+        return true;
     }
 }
